@@ -4,3 +4,46 @@ h1.display-1 {
   text-shadow: #000 0 0 50px;
   font-weight: revert;
 }
+
+@media print {
+    header > nav{
+        display: none !important;
+    }
+
+    .article-meta {
+        display: none  !important;
+    }
+
+    .bottom-page-nav {
+        display: none !important;
+    }
+
+    main > .td-content{
+        break-inside: avoid  !important;
+    }
+
+    main > .td-content:first-child{
+        break-after: always !important;
+    }
+
+    header > nav {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    header > nav > div > div  {
+        display: none !important;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+    }
+
+
+    div.highlight {
+        break-inside: avoid  !important;
+    }
+}
